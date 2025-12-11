@@ -23,6 +23,18 @@ const catalogs = [
     href: '/macbook',
     gradient: 'from-gray-700 to-gray-900',
   },
+  {
+    title: 'Watch',
+    description: 'Контроль здоровья, стиль и безопасность на запястье.',
+    href: '/watch',
+    gradient: 'from-amber-500 to-orange-600',
+  },
+  {
+    title: 'AirPods',
+    description: 'Беспроводной звук, продвинутый шумодав и комфорт.',
+    href: '/airpods',
+    gradient: 'from-sky-500 to-indigo-500',
+  },
 ]
 
 export default function CatalogLinks() {
@@ -44,7 +56,7 @@ export default function CatalogLinks() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {catalogs.map((catalog, index) => (
             <motion.div
               key={catalog.title}
@@ -85,4 +97,8 @@ export default function CatalogLinks() {
     </section>
   )
 }
+
+
+
+
 

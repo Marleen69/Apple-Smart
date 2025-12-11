@@ -3,6 +3,7 @@
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import ProductCard from '@/components/ProductCard'
+import SupportBanner from '@/components/SupportBanner'
 import { motion } from 'framer-motion'
 
 const macbooks = [
@@ -48,6 +49,34 @@ const macbooks = [
     imageColor: 'bg-gradient-to-br from-teal-600 to-cyan-700',
     href: '#',
   },
+  {
+    name: 'MacBook Pro 13" M2',
+    description: 'Компактный Pro с активным охлаждением для стабильной скорости.',
+    price: 'От 199 990 ₽',
+    imageColor: 'bg-gradient-to-br from-slate-700 to-slate-900',
+    href: '#',
+  },
+  {
+    name: 'MacBook Air 13" M2',
+    description: 'Тонкий и тихий ноутбук на каждый день с отличной автономностью.',
+    price: 'От 139 990 ₽',
+    imageColor: 'bg-gradient-to-br from-amber-500 to-orange-600',
+    href: '#',
+  },
+  {
+    name: 'MacBook Air 15" M2',
+    description: 'Больше дисплей — столько же лёгкости и целый день работы.',
+    price: 'От 169 990 ₽',
+    imageColor: 'bg-gradient-to-br from-green-500 to-emerald-600',
+    href: '#',
+  },
+  {
+    name: 'MacBook Pro 14" M3',
+    description: 'Свежий чип, дисплей mini‑LED и все порты для работы в студии.',
+    price: 'От 269 990 ₽',
+    imageColor: 'bg-gradient-to-br from-purple-700 to-black',
+    href: '#',
+  },
 ]
 
 export default function MacBookPage() {
@@ -88,6 +117,7 @@ export default function MacBookPage() {
         </div>
       </section>
 
+      <SupportBanner subtitle="Настроим при доставке, поможем перенести данные и подобрать комплектацию." />
       <Footer />
     </main>
   )

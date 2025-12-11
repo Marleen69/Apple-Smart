@@ -3,6 +3,7 @@
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import ProductCard from '@/components/ProductCard'
+import SupportBanner from '@/components/SupportBanner'
 import { motion } from 'framer-motion'
 
 const ipads = [
@@ -48,6 +49,34 @@ const ipads = [
     imageColor: 'bg-gradient-to-br from-teal-500 to-cyan-600',
     href: '#',
   },
+  {
+    name: 'iPad Air M2 11"',
+    description: 'Лёгкий и мощный, идеален для учебы и творчества.',
+    price: 'От 92 990 ₽',
+    imageColor: 'bg-gradient-to-br from-cyan-500 to-blue-600',
+    href: '#',
+  },
+  {
+    name: 'iPad 10-го поколения',
+    description: 'Большой дисплей и USB‑C по доступной цене.',
+    price: 'От 42 990 ₽',
+    imageColor: 'bg-gradient-to-br from-orange-400 to-red-500',
+    href: '#',
+  },
+  {
+    name: 'iPad 9-го поколения',
+    description: 'Классическая модель для серфинга и видео.',
+    price: 'От 34 990 ₽',
+    imageColor: 'bg-gradient-to-br from-gray-500 to-gray-700',
+    href: '#',
+  },
+  {
+    name: 'iPad mini Cellular',
+    description: 'Связь LTE/5G, компактен и всегда онлайн.',
+    price: 'От 64 990 ₽',
+    imageColor: 'bg-gradient-to-br from-pink-500 to-purple-600',
+    href: '#',
+  },
 ]
 
 export default function IPadPage() {
@@ -88,6 +117,7 @@ export default function IPadPage() {
         </div>
       </section>
 
+      <SupportBanner subtitle="Поможем подобрать iPad под учебу, работу и мультимедиа, организуем доставку." />
       <Footer />
     </main>
   )

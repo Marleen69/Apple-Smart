@@ -3,6 +3,7 @@
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import ProductCard from '@/components/ProductCard'
+import SupportBanner from '@/components/SupportBanner'
 import { motion } from 'framer-motion'
 
 const iphones = [
@@ -48,6 +49,34 @@ const iphones = [
     imageColor: 'bg-gradient-to-br from-gray-400 to-gray-600',
     href: '#',
   },
+  {
+    name: 'iPhone 14 Plus',
+    description: 'Большой дисплей и проверенная камера с фотоническим HDR.',
+    price: 'От 94 990 ₽',
+    imageColor: 'bg-gradient-to-br from-emerald-500 to-teal-600',
+    href: '#',
+  },
+  {
+    name: 'iPhone 13',
+    description: 'Выдержанная классика с поддержкой 5G и отличной автономностью.',
+    price: 'От 69 990 ₽',
+    imageColor: 'bg-gradient-to-br from-teal-400 to-cyan-500',
+    href: '#',
+  },
+  {
+    name: 'iPhone 13 mini',
+    description: 'Компактный флагман для тех, кто ценит размер и мощь.',
+    price: 'От 64 990 ₽',
+    imageColor: 'bg-gradient-to-br from-indigo-500 to-blue-700',
+    href: '#',
+  },
+  {
+    name: 'iPhone 12',
+    description: 'Надёжный выбор с поддержкой MagSafe и OLED‑дисплеем.',
+    price: 'От 54 990 ₽',
+    imageColor: 'bg-gradient-to-br from-slate-500 to-slate-700',
+    href: '#',
+  },
 ]
 
 export default function IPhonePage() {
@@ -88,6 +117,7 @@ export default function IPhonePage() {
         </div>
       </section>
 
+      <SupportBanner subtitle="Подскажем модель, организуем доставку и перенос данных." />
       <Footer />
     </main>
   )

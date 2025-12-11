@@ -1,12 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Search, ShoppingBag } from 'lucide-react'
+import { Menu, Search, ShoppingBag, X } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,12 +21,10 @@ export default function NavBar() {
     { name: 'Mac', href: '/macbook' },
     { name: 'iPad', href: '/ipad' },
     { name: 'iPhone', href: '/iphone' },
-    { name: 'Watch', href: '#' },
-    { name: 'AirPods', href: '#' },
-    { name: 'TV и Дом', href: '#' },
-    { name: 'Развлечения', href: '#' },
-    { name: 'Аксессуары', href: '#' },
-    { name: 'Поддержка', href: '#' },
+    { name: 'Watch', href: '/watch' },
+    { name: 'AirPods', href: '/airpods' },
+    { name: 'Аксессуары', href: '#accessories' },
+    { name: 'Поддержка', href: '#support' },
   ]
 
   return (
@@ -78,8 +77,39 @@ export default function NavBar() {
           >
             <ShoppingBag size={18} />
           </button>
+          <button
+            aria-label="Меню"
+            className="md:hidden text-[#1d1d1f] hover:opacity-70 transition-opacity duration-200"
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+          >
+            {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
         </div>
       </nav>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-[#e5e7eb] shadow-sm">
+          <div className="max-w-[980px] mx-auto px-4 py-4 space-y-2">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="block py-3 text-[15px] text-[#1d1d1f] border-b border-[#f1f1f3] last:border-none hover:text-[#0071e3] transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+            <div className="pt-3 flex items-center gap-3 text-sm text-[#4b5563]">
+              <div className="w-8 h-8 rounded-full bg-[#0071e3] text-white flex items-center justify-center text-xs font-semibold">
+                24/7
+              </div>
+              Поддержка и доставка по всей России
+            </div>
+          </div>
+        </div>
+      )}
     </motion.header>
   )
 }

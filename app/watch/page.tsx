@@ -3,6 +3,7 @@
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import ProductCard from '@/components/ProductCard'
+import SupportBanner from '@/components/SupportBanner'
 import { motion } from 'framer-motion'
 
 const watches = [
@@ -48,6 +49,34 @@ const watches = [
     imageColor: 'bg-gradient-to-br from-purple-600 to-indigo-700',
     href: '#',
   },
+  {
+    name: 'Apple Watch SE (2024)',
+    description: 'Все базовые функции здоровья и уведомлений по выгодной цене.',
+    price: 'От 32 990 ₽',
+    imageColor: 'bg-gradient-to-br from-cyan-500 to-blue-600',
+    href: '#',
+  },
+  {
+    name: 'Apple Watch Edition',
+    description: 'Премиальные материалы и расширенная защита корпуса.',
+    price: 'От 189 990 ₽',
+    imageColor: 'bg-gradient-to-br from-yellow-500 to-amber-600',
+    href: '#',
+  },
+  {
+    name: 'Apple Watch Kids',
+    description: 'Режимы безопасности, геолокация и связь с родителями.',
+    price: 'От 27 990 ₽',
+    imageColor: 'bg-gradient-to-br from-teal-500 to-emerald-600',
+    href: '#',
+  },
+  {
+    name: 'Apple Watch Trail',
+    description: 'Для туризма и бега: расширенная автономность и яркий экран.',
+    price: 'От 74 990 ₽',
+    imageColor: 'bg-gradient-to-br from-gray-700 to-black',
+    href: '#',
+  },
 ]
 
 export default function WatchPage() {
@@ -88,8 +117,13 @@ export default function WatchPage() {
         </div>
       </section>
 
+      <SupportBanner subtitle="Подберём ремешок, настроим eSIM и доставим в удобное время." />
       <Footer />
     </main>
   )
 }
+
+
+
+
 
